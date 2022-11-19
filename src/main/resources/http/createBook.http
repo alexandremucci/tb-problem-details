@@ -1,0 +1,8 @@
+### Send POST request with json body
+POST http://localhost:8080/book/
+Content-Type: application/json
+
+{
+  "ISBN": "123",
+  "title": "Java How to Program"
+}
