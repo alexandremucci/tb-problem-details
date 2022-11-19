@@ -12,7 +12,9 @@ public class ErrorHandler {
 
   @ExceptionHandler(DuplicateException.class)
   private ResponseEntity<Object> handleDuplicateException(DuplicateException e) {
-    return ResponseEntity.status(HttpStatus.CONFLICT).body(ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, e.getMessage()));
+    return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .body(ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, e.getMessage()));
   }
 
 }
